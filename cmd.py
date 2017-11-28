@@ -4,7 +4,7 @@ import sys
 
 
 class Cmd(object):
-    __slots__ = ('cp_option', 'class_name', 'args', 'XjreOption')
+    __slots__ = ('cp_option', 'class_name', 'args', 'jre_option')
 
     def __init__(self, argv):
         parser = argparse.ArgumentParser(description='jvm by wands')
@@ -16,7 +16,7 @@ class Cmd(object):
 
         _argv = parser.parse_args(argv)
 
-        self.XjreOption = _argv.Xjre
+        self.jre_option = _argv.Xjre
         self.cp_option = _argv.classpath
         if len(_argv.class_info) > 1:
             self.class_name = _argv.class_info[0]

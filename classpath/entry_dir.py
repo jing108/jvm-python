@@ -19,5 +19,6 @@ class DirEntry(Entry):
 
 
 if __name__ == '__main__':
-    dir = DirEntry('.')
-    print(dir.string())
+    _dir = DirEntry('/Users/wands/IdeaProjects/Algorithm/src/')
+    print(_dir.string())
+    print(_dir.read_class('Test.class'))
